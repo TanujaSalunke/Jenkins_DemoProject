@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Git clone'){
             steps{
-                echo "Hello"
+                bat "mvn compile"
             }
         }
         
