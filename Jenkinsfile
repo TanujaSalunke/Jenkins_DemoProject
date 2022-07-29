@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Git clone'){
             steps{
-                git clone 'https://github.com/TanujaSalunke/Jenkins_DemoProject.git'
+                echo "Hello"
             }
         }
         
