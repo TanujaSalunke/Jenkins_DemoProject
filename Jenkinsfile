@@ -6,35 +6,30 @@ pipeline{
                 bat "mvn validate"
             }
         }        
-        stage('maven build'){
+        stage('maven compile'){
             steps{
                 bat "mvn compile"
             }
         }
-        stage('Git clone'){
+        stage('test'){
             steps{
                 bat "mvn test"
             }
         }
-        stage('Git clone'){
+        stage('package'){
             steps{
                 bat "mvn package"
             }
         }
-        stage('Git clone'){
+        stage('verify'){
             steps{
                 bat "mvn verify"
             }
         }
-         stage('Git clone'){
+         stage('install'){
             steps{
                 bat "mvn install"
             }
-        }
-         stage('Git clone'){
-            steps{
-                bat "mvn compile"
-            }
-        }     
+        }         
     }
 }
